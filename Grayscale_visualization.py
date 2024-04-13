@@ -9,7 +9,7 @@ nii_img = nib.load(nii_file)
 nii_data = nii_img.get_fdata()
 
 # 可以根据需要选择特定的切片进行显示
-slice_index = 100 # 选择第50个切片
+slice_index = 100 # 选择第100个切片
 slice_data = nii_data[:, :, slice_index]
 
 # 显示图像
