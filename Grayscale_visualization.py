@@ -2,7 +2,7 @@ import nibabel as nib
 import matplotlib.pyplot as plt
 
 # 读取.nii.gz文件
-nii_file = r'E:\LUCF-Net\test_log\synapse\LUCF_Net\predictions\case0001_img.nii.gz'
+nii_file = r'your_nii_file_path'
 nii_img = nib.load(nii_file)
 
 # 获取图像数据
