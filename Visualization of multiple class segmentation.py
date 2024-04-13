@@ -6,8 +6,6 @@ from scipy.ndimage import gaussian_filter
 # 读取.nii.gz文件
 nii_file = r'your_predict_nii_file_path'
 nii_img = nib.load(nii_file)
-sigma = 1
-# 高斯滤波器的标准差
 
 # 获取图像数据
 nii_data = nii_img.get_fdata()
@@ -22,7 +20,7 @@ cmap = ListedColormap(colors)
 background_value = 0
 slice_data[np.where(slice_data == background_value)] = background_value
 # 使用高斯滤波器平滑边缘
-sigma =1 # 高斯滤波器的标准差
+sigma = 0# 高斯滤波器的标准差
 smoothed_data = gaussian_filter(slice_data, sigma=sigma)
 # 显示图像，使用bilinear插值方法平滑图像
 plt.imshow(smoothed_data, cmap=cmap, interpolation='bilinear')
